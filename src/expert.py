@@ -5,17 +5,10 @@ import torch.nn.functional as F
 
 
 class Expert(nn.Module):
-    '''
-    FCN architecture for large scale scene coordiante regression.
-
-    '''
 
     OUTPUT_SUBSAMPLE = 8
 
     def __init__(self, mean):
-        '''
-        Constructor.
-        '''
         super(Expert, self).__init__()
 
         self.conv1 = nn.Conv2d(3, 32, 3, 1, 1)
@@ -46,11 +39,6 @@ class Expert(nn.Module):
         self.mean = mean.clone()
 
     def forward(self, inputs):
-        '''
-        Forward pass.
-
-        inputs -- 4D data tensor (BxCxHxW)
-        '''
 
         x = inputs
         x = F.relu(self.conv1(x))
