@@ -131,7 +131,7 @@ epochs = math.ceil(opt.iterations / len(trainset))
 
 for epoch in range(epochs):
 
-    print("=== Epoch: %d ======================================" % epoch)
+    print("---------------- Epoch: %d ---------------" % epoch)
 
     ensemble.save(model_file)
     print('Saved model.')
