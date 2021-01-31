@@ -15,26 +15,6 @@ print("my_tree tree y_range: ", my_tree.y_range)
 print("my_tree tree z_range: ", my_tree.z_range)
 
 
-# first_flag = True
-# max_node_count = 0
-
-# sum_count = 0
-# valid_count = 0
-# for i in range(len(my_tree.tree)):
-#     if my_tree.tree[i] is not None:
-#         if first_flag:
-#             print("The first not empty is my_tree.tree[{}]: {}".format(i, my_tree.tree[i]))
-#             first_flag = False
-#
-#         max_node_count = max(len(my_tree.tree[i]), max_node_count)
-#         sum_count += len(my_tree.tree[i])
-#         valid_count += 1
-#
-# print("The longest node is: ", max_node_count)
-# print("Total number: ", valid_count)
-# print("Average length: ", sum_count / valid_count)
-
-
 with open("sceneA_coords.txt", "rb") as f:
     sceneA_coords = pickle.load(f)
 
