@@ -42,7 +42,7 @@ int esac_forward(at::Tensor scene_coord_src, at::Tensor hypo_src, at::Tensor out
     StopWatch stopW;
 
     std::vector<esac::pose_t> hypotheses;
-    std::vector<std::vector<cv::Point2i>> sampledPoints;  
+    std::vector<std::vector<cv::Point2i>> sampled_points;  
     std::vector<std::vector<cv::Point2f>> image_points;
     std::vector<std::vector<cv::Point3f>> object_points;
 
@@ -54,7 +54,7 @@ int esac_forward(at::Tensor scene_coord_src, at::Tensor hypo_src, at::Tensor out
         MAX_SAMPLING_ATTEMPTS,
         threshold,
         hypotheses,
-        sampledPoints,
+        sampled_points,
         image_points,
         object_points);
 
